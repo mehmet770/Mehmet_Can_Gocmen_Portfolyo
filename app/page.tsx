@@ -157,7 +157,7 @@ export default function Home() {
               </span>
             </motion.h1>
             <motion.p className="text-2xl text-slate-600 mb-12 leading-relaxed max-w-2xl">
-              Yazılım geliştirici olarak web, mobil ve oyun projelerinde
+              Yazılım geliştirici olarak web ve masaüstü projeleri üzerinde
               çalışıyorum. Yapay zeka ve teknolojinin eğitimdeki kullanımı
               konusunda araştırmalar yapıyorum.
             </motion.p>
@@ -200,7 +200,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-4 gap-4 mb-12 pr-12"
+            className="grid grid-cols-3 gap-4 mb-12 pr-12"
           >
             <div className="bg-white/40 backdrop-blur-md rounded-xl border border-white/50 p-4 text-center">
               <p className="text-3xl font-bold text-slate-900">{projectsData.length}</p>
@@ -211,12 +211,6 @@ export default function Home() {
                 {projectsData.filter(p => p.category === 'web').length}
               </p>
               <p className="text-sm text-blue-500">Web Projesi</p>
-            </div>
-            <div className="bg-green-50/80 backdrop-blur-md rounded-xl border border-green-100 p-4 text-center">
-              <p className="text-3xl font-bold text-green-600">
-                {projectsData.filter(p => (p.category as string) === 'mobile').length}
-              </p>
-              <p className="text-sm text-green-500">Mobil Uygulama</p>
             </div>
             <div className="bg-orange-50/80 backdrop-blur-md rounded-xl border border-orange-100 p-4 text-center">
               <p className="text-3xl font-bold text-orange-600">
@@ -390,8 +384,8 @@ export default function Home() {
                 <ul className="space-y-3 text-slate-700">
                   {[
                     { label: 'Web Geliştirme (React, Next.js)', dot: 'bg-blue-500' },
-                    { label: 'Mobil Uygulama Geliştirme', dot: 'bg-green-500' },
-                    { label: 'Oyun Geliştirme', dot: 'bg-orange-500' },
+                    { label: 'Masaüstü Uygulama Geliştirme', dot: 'bg-orange-500' },
+                    { label: 'Oyun Geliştirme', dot: 'bg-slate-500' },
                     { label: 'Yapay Zeka ve Eğitim Teknolojileri', dot: 'bg-purple-500' },
                   ].map((item) => (
                     <li key={item.label} className="flex items-center gap-3">

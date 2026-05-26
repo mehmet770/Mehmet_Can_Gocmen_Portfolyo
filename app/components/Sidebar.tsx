@@ -56,8 +56,11 @@ export default function Sidebar() {
           className="text-center"
         >
           <p className="text-base font-bold text-slate-900">Mehmet Can Göçmen</p>
-          <p className="text-xs font-semibold text-slate-500 tracking-wider uppercase mt-1">
-            Teknoloji Takım Lideri
+          <p className="text-xs font-semibold text-slate-600 tracking-wide mt-1">
+            Amasya Üniversitesi
+          </p>
+          <p className="text-xs text-slate-500 mt-0.5 text-center leading-snug">
+            Bilgisayar Destekli Tasarım ve Animasyon
           </p>
         </motion.div>
 
