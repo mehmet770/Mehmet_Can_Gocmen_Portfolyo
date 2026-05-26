@@ -219,7 +219,7 @@ export default function Home() {
             </div>
             <div className="bg-green-50/80 backdrop-blur-md rounded-xl border border-green-100 p-4 text-center">
               <p className="text-3xl font-bold text-green-600">
-                {projectsData.filter(p => p.category === 'mobile').length}
+                {projectsData.filter(p => (p.category as string) === 'mobile').length}
               </p>
               <p className="text-sm text-green-500">Mobil Uygulama</p>
             </div>
