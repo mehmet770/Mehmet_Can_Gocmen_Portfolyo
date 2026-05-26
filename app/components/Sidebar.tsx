@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -29,11 +30,13 @@ export default function Sidebar() {
           className="relative w-32 h-32 rounded-full bg-gradient-to-br from-slate-200 to-slate-100 border-2 border-white/70 flex items-center justify-center overflow-hidden shadow-xl"
         >
           {!imgError ? (
-            <img
+            <Image
               src="/profile.jpg"
               alt="Mehmet Can Göçmen"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
               onError={() => setImgError(true)}
+              priority
             />
           ) : (
             <div className="flex flex-col items-center justify-center gap-1">
