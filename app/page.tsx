@@ -79,17 +79,12 @@ const skillsData = [
   {
     category: 'Backend',
     color: 'purple',
-    skills: ['C#', '.NET Framework', 'Node.js', 'PHP', 'SQL Server', 'MySQL'],
-  },
-  {
-    category: 'Mobil',
-    color: 'green',
-    skills: ['React Native', 'Expo', 'Firebase', 'Lottie Animations'],
+    skills: ['C#', 'PHP', 'SQL', 'MySQL'],
   },
   {
     category: 'Araçlar & Platform',
     color: 'orange',
-    skills: ['Git', 'GitHub', 'Vercel', 'WinForms', 'GDI+', 'Socket Programming'],
+    skills: ['Git', 'GitHub', 'Vercel', 'Supabase', 'WinSCP'],
   },
 ]
 
@@ -277,11 +272,16 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: gi * 0.1 }}
                   className="bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 p-6 shadow-lg"
                 >
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className={`w-3 h-3 rounded-full ${c.dot}`} />
-                    <h3 className={`text-base font-bold ${c.heading} uppercase tracking-wider`}>
-                      {group.category}
-                    </h3>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-3 h-3 rounded-full ${c.dot}`} />
+                      <h3 className={`text-base font-bold ${c.heading} uppercase tracking-wider`}>
+                        {group.category}
+                      </h3>
+                    </div>
+                    <span className="px-2 py-0.5 text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+                      Temel Düzey
+                    </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.skills.map((skill) => (
@@ -296,38 +296,6 @@ export default function Home() {
                 </motion.div>
               )
             })}
-          </div>
-        </section>
-
-        {/* ── Programming Languages ────────────────────────────────────── */}
-        <section id="languages" className="py-24 pr-12 pl-8">
-          <motion.div
-            variants={sectionTitleVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h2 className="text-5xl font-bold text-slate-900 mb-4">Yazılım Dilleri Bilgisi</h2>
-            <p className="text-xl text-slate-500">Çalıştığım programlama dilleri</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {(['C#', 'PHP', 'JavaScript', 'CSS', 'React'] as const).map((lang, i) => (
-              <motion.div
-                key={lang}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 p-5 shadow-lg flex flex-col items-center gap-3"
-              >
-                <span className="text-lg font-bold text-slate-900">{lang}</span>
-                <span className="px-3 py-1 text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
-                  Temel Düzey
-                </span>
-              </motion.div>
-            ))}
           </div>
         </section>
 
@@ -409,15 +377,12 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-slate-900 mb-12">Hakkımda</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
               <div className="bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 p-8 shadow-lg">
-                <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                  Yazılım geliştirme alanında web, mobil ve masaüstü
-                  uygulamalar üzerinde çalışıyorum. Yapay zeka araçlarının
-                  akademik alanda doğru kullanımı konusunda araştırmalar
-                  yapıyorum.
-                </p>
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  Ekip çalışmasına önem veriyor, yeni teknolojileri öğrenmeye
-                  ve projelerimde uygulamaya hevesliyim.
+                  Yazılım geliştirme alanında web ve masaüstü uygulamaları üzerine pratik çalışmalar gerçekleştiriyorum.
+                  Yapay zeka araçlarının akademik alanlardaki etkin ve doğru kullanımı üzerine araştırmalar yapmaktayım.
+                  TEKNOFEST kapsamında arama kurtarma dronu geliştiren ekibin liderliğini üstlendim; projenin ESC K30
+                  entegrasyonu ve geliştirme süreçlerini aktif olarak yönetmeye devam ediyorum. Ekip çalışmasına uyumlu,
+                  yeni teknolojileri öğrenmeye istekli bir önlisans öğrencisiyim.
                 </p>
               </div>
               <div className="bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 p-8 shadow-lg">

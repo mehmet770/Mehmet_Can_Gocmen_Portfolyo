@@ -9,7 +9,6 @@ const navigationItems = [
   { label: 'Anasayfa', href: '#home' },
   { label: 'Projeler', href: '#projects' },
   { label: 'Yetenekler', href: '#skills' },
-  { label: 'Yazılım Dilleri', href: '#languages' },
   { label: 'Web Sitem', href: '#website' },
   { label: 'Hakkımda', href: '#about' },
   { label: 'İletişim', href: '#contact' },
